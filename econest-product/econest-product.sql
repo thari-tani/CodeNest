@@ -1,0 +1,46 @@
+CREATE TABLE `product` (
+  `product_code` varchar(30) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `description` varchar(120) NOT NULL,
+  `price` varchar(10) NOT NULL,
+  `eco_rating` double NOT NULL,
+  PRIMARY KEY (`product_code`),
+  UNIQUE KEY `product-code_UNIQUE` (`product_code`),
+  CONSTRAINT `chk_eco_rating` CHECK (((`eco_rating` >= 1) and (`eco_rating` <= 5))),
+  CONSTRAINT `chk_price` CHECK (regexp_like(`price`,_utf8mb4'\\$[0-9]+\\.[0-9][0-9]')),
+  CONSTRAINT `chk_product_code` CHECK (regexp_like(`product_code`,_utf8mb4'ECO-[0-9]{6}'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO product (product_code, name, description, price, eco_rating)
+VALUES
+('ECO-000001', 'Organic Potting Soil', 'Nutrient-rich organic soil suitable for indoor and outdoor plants.', '$12.50', 4.8),
+('ECO-000002', 'Bamboo Garden Stakes', 'Biodegradable bamboo stakes for supporting climbing plants.', '$8.00', 4.9),
+('ECO-000003', 'Stainless Steel Trowel', 'Durable stainless steel hand trowel with an ergonomic wooden handle.', '$15.75', 4.2),
+('ECO-000004', 'Compost Fertilizer', 'Natural compost fertilizer made from decomposed organic materials.', '$18.00', 5.0),
+('ECO-000005', 'Terracotta Plant Pot', 'Traditional terracotta pot suitable for flowers and small plants.', '$6.50', 4.5),
+('ECO-000006', 'Watering Can', 'Reusable watering can with a detachable sprinkler head.', '$14.00', 4.0),
+('ECO-000007', 'Coconut Coir Bricks', 'Compressed coconut fibre bricks used as a sustainable growing medium.', '$9.50', 4.9),
+('ECO-000008', 'Pruning Shears', 'Precision pruning shears designed for trimming branches and stems.', '$22.00', 4.1),
+('ECO-000009', 'Organic Tomato Seeds', 'Non-GMO tomato seeds suitable for home and commercial cultivation.', '$4.50', 4.8),
+('ECO-000010', 'Garden Gloves', 'Reusable protective gloves made with durable natural materials.', '$7.25', 4.0),
+('ECO-000011', 'Drip Irrigation Kit', 'Water-efficient irrigation kit for delivering water directly to plant roots.', '$35.00', 4.7),
+('ECO-000012', 'Neem Oil Spray', 'Plant-based neem oil solution for managing common garden pests.', '$11.00', 4.6),
+('ECO-000013', 'Wooden Seed Tray', 'Reusable wooden seed-starting tray for growing seedlings.', '$13.50', 4.7),
+('ECO-000014', 'Garden Rake', 'Lightweight garden rake for collecting leaves and preparing soil.', '$19.00', 3.9),
+('ECO-000015', 'Organic Rose Fertilizer', 'Specially formulated organic fertilizer for healthy rose growth.', '$16.50', 4.8),
+('ECO-000016', 'Hanging Plant Basket', 'Eco-friendly hanging basket made from natural woven fibres.', '$10.00', 4.5),
+('ECO-000017', 'Rainwater Collection Barrel', 'Large reusable barrel designed for collecting and storing rainwater.', '$65.00', 4.9),
+('ECO-000018', 'Garden Hose', 'Flexible and durable garden hose for everyday watering needs.', '$28.00', 3.8),
+('ECO-000019', 'Wildflower Seed Mix', 'A mixture of native wildflower seeds supporting garden biodiversity.', '$6.75', 5.0),
+('ECO-000020', 'Wooden Raised Garden Bed', 'Sustainable wooden raised bed for growing vegetables and herbs.', '$48.00', 4.6),
+('ECO-000021', 'Organic Pest Repellent', 'Plant-derived pest repellent suitable for organic gardening.', '$13.00', 4.7),
+('ECO-000022', 'Metal Garden Sprayer', 'Refillable hand-operated sprayer for watering and plant treatments.', '$17.50', 3.9),
+('ECO-000023', 'Seedling Starter Pots', 'Biodegradable starter pots made from recycled paper pulp.', '$5.50', 4.9),
+('ECO-000024', 'Garden Wheelbarrow', 'Heavy-duty wheelbarrow designed for transporting soil and compost.', '$85.00', 3.7),
+('ECO-000025', 'Organic Lawn Fertilizer', 'Natural fertilizer designed to promote healthy and sustainable lawns.', '$24.00', 4.6),
+('ECO-000026', 'Solar Garden Lights', 'Energy-efficient outdoor lights powered by integrated solar panels.', '$32.00', 4.8),
+('ECO-000027', 'Hand Cultivator', 'Compact gardening tool for loosening soil and removing weeds.', '$12.00', 4.1),
+('ECO-000028', 'Recycled Plastic Planter', 'Weather-resistant planter manufactured using recycled plastic materials.', '$21.50', 4.3),
+('ECO-000029', 'Organic Herb Seed Kit', 'Collection of basil, parsley, coriander and mint seeds for cultivation.', '$14.50', 4.9),
+('ECO-000030', 'Electric Garden Shredder', 'Electric shredder for converting garden waste into reusable mulch.', '$145.00', 4.2);
+

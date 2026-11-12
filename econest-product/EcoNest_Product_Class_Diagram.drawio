@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="econest-class" name="EcoNest Product - Class Diagram">
+    <mxGraphModel dx="828" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jf" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=42;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="&lt;&lt;external&gt;&gt;&lt;br&gt;&lt;b&gt;javax.swing.JFrame&lt;/b&gt;" vertex="1">
+          <mxGeometry height="74" width="200" x="360" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jfa" parent="jf" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="16" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="jfl" parent="jf" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="200" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jfm" parent="jf" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="12" width="200" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="pa" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ProductApp" vertex="1">
+          <mxGeometry height="564" width="400" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="paa" parent="pa" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="- logger : Logger {static}&lt;br&gt;- db : DBManager&lt;br&gt;- products : ArrayList&lt;Product&gt;&lt;br&gt;- newProducts : ArrayList&lt;Product&gt;&lt;br&gt;- changedProducts : ArrayList&lt;Product&gt;&lt;br&gt;- deletedProducts : ArrayList&lt;Product&gt;&lt;br&gt;- result : ResultSet&lt;br&gt;- isSaved : boolean&lt;br&gt;- noticeAdded : boolean&lt;br&gt;- DESC_MAX_CHARS : int {final} = 120&lt;br&gt;- productTable : JTable&lt;br&gt;- productCodeTextField, nameTextField, priceTextField, ecoRatingTextField : JTextField&lt;br&gt;- descriptionTextArea, outputTextArea : JTextArea&lt;br&gt;- ecoRatingSlider : JSlider&lt;br&gt;- addButton, updateButton, deleteButton, saveButton, exitButton : JButton" vertex="1">
+          <mxGeometry height="278" width="400" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="pal" parent="pa" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="400" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pam" parent="pa" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="+ ProductApp()&lt;br&gt;- initComponents() : void&lt;br&gt;- loadTable() : void&lt;br&gt;- resetLists() : void&lt;br&gt;- addButtonActionPerformed(evt : ActionEvent) : void&lt;br&gt;- updateButtonActionPerformed(evt : ActionEvent) : void&lt;br&gt;- deleteButtonActionPerformed(evt : ActionEvent) : void&lt;br&gt;- saveButtonActionPerformed(evt : ActionEvent) : void&lt;br&gt;- exitButtonActionPerformed(evt : ActionEvent) : void&lt;br&gt;- ecoRatingSliderStateChanged(evt : ChangeEvent) : void&lt;br&gt;- ecoRatingTextFieldKeyPressed(evt : KeyEvent) : void&lt;br&gt;- priceTextFieldKeyPressed(evt : KeyEvent) : void&lt;br&gt;- formWindowClosed(evt : WindowEvent) : void&lt;br&gt;+ main(args : String[]) : void {static}" vertex="1">
+          <mxGeometry height="256" width="400" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="DBManager" vertex="1">
+          <mxGeometry height="348" width="420" x="720" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dba" parent="db" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="- url : String&lt;br&gt;- username : String&lt;br&gt;- password : String&lt;br&gt;- connection : Connection" vertex="1">
+          <mxGeometry height="80" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dbl" parent="db" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="420" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="dbm" parent="db" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="+ DBManager(url : String, username : String, password : String)&lt;br&gt;+ connect() : void&lt;br&gt;+ connect(url : String, username : String, password : String) : void&lt;br&gt;+ close() : void&lt;br&gt;+ searchQuery(query : String) : ResultSet&lt;br&gt;+ updateQuery(query : String, rowCount : long) : void&lt;br&gt;+ updateQuery(query : String) : void&lt;br&gt;+ getUrl() : String&lt;br&gt;+ setUrl(url : String) : void&lt;br&gt;+ getUsername() : String&lt;br&gt;+ setUsername(username : String) : void&lt;br&gt;+ getPassword() : String&lt;br&gt;+ setPassword(password : String) : void" vertex="1">
+          <mxGeometry height="238" width="420" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pr" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Product" vertex="1">
+          <mxGeometry height="334" width="440" x="170" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="pra" parent="pr" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="- productCode : String&lt;br&gt;- name : String&lt;br&gt;- description : String&lt;br&gt;- price : String&lt;br&gt;~ rating : double" vertex="1">
+          <mxGeometry height="98" width="440" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="prl" parent="pr" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="440" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="prm" parent="pr" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="+ Product(productCode : String, name : String, description : String, price : String, rating : double)&lt;br&gt;+ getProductCode() : String&lt;br&gt;+ setProductCode(productCode : String) : void&lt;br&gt;+ getName() : String&lt;br&gt;+ setName(name : String) : void&lt;br&gt;+ getDescription() : String&lt;br&gt;+ setDescription(description : String) : void&lt;br&gt;+ getPrice() : String&lt;br&gt;+ setPrice(price : String) : void&lt;br&gt;+ getRating() : double&lt;br&gt;+ setRating(rating : double) : void" vertex="1">
+          <mxGeometry height="202" width="440" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="pa" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=12;startSize=12;" target="jf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="pa" style="endArrow=open;endFill=0;html=1;rounded=0;endSize=12;startSize=12;" target="db" value="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2t" connectable="0" parent="e2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="pa" style="endArrow=none;startArrow=diamondThin;startFill=0;html=1;rounded=0;endSize=12;startSize=12;" target="pr" value="products, newProducts, changedProducts, deletedProducts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3t" connectable="0" parent="e3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
