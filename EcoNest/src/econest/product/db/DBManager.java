@@ -56,7 +56,6 @@ public class DBManager {
             //Prepare the query for execution
            PreparedStatement statement = connection.prepareStatement(query);
            ResultSet result = statement.executeQuery();
-           statement.close();
            return result;
             
         } catch (SQLException e){
